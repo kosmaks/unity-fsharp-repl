@@ -1,0 +1,34 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         ToolsVersion="4.0">
+<!--
+# Copyright (c) 2002-2011 Microsoft Corporation. 
+#
+-->
+
+  <PropertyGroup>
+    <TargetFramework Condition="'$(TargetFramework)'==''">net40</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'sl5-compiler' ">
+    <ProjectFiles Include="fsharp\FSharp.Compiler.Silverlight\FSharp.Compiler.Silverlight.fsproj"/>
+  </ItemGroup>
+
+  <!-- Compiler: .NET 2.0 and 4.0 only -->
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net20' or 
+                         '$(TargetFramework)' == 'net40' or 
+                         '$(TargetFramework)' == 'mono20' or 
+                         '$(TargetFramework)' == 'mono40'">
+    <ProjectFiles Include="fsharp\FSharp.Build\FSharp.Build.fsproj"/>
+    <ProjectFiles Include="fsharp\FSharp.Compiler\FSharp.Compiler.fsproj"/>
+    <ProjectFiles Include="fsharp\FSharp.Compiler.Server.Shared\FSharp.Compiler.Server.Shared.fsproj"/>
+    <ProjectFiles Include="fsharp\FSharp.Compiler.Interactive.Settings\FSharp.Compiler.Interactive.Settings.fsproj"/>
+    <ProjectFiles Include="fsharp\Fsc\Fsc.fsproj"/>
+    <ProjectFiles Include="fsharp\Fsi\Fsi.fsproj"/>
+  </ItemGroup>
+
+
+  <Import Project="root.traversal.targets"/>
+
+  <!-- Insert any customizations for targets here -->
+
+</Project>
+
