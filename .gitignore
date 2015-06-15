@@ -1,0 +1,5 @@
+.project_vimrc
+obj/
+packages/
+bin/
+.DS_Store
