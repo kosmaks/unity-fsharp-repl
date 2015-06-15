@@ -29,6 +29,8 @@ $ ./build.sh
   * FSharp.Compiler.Interactive.Settings.dll (from repo)
   * FSharp.Compiler.Server.Shared.dll (from repo)
   * mscorlib.dll (net20)
+  * System.dll (net20)
+  * System.Core.dll (net20)
   * UnityEngine.dll
   * UnityEditor.dll
 * Run client from unity project root path
