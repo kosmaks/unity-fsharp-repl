@@ -1,18 +1,18 @@
-=== Unity F# REPL ===
+# Unity F# REPL
 
 Requirements:
 * Mono >3.0
 * F# binaries installed
 * Tested on Unity 5.0.2f, but probably would work with older versions
 
-== Description ==
+## Description
 
-*This is pre-pre-pre-alpha version :) Don''t use it for any serious project so far.*
+**This is pre-pre-pre-alpha version :) Don''t use it for any serious project so far.**
 
 This library integrates F# interactive repl into Unity environment.
 It uses modified F# compiler libraries (.NET 2.0) for embedding.
 
-== How to use ==
+## How to use 
 
 Build tested on OS X.
 
